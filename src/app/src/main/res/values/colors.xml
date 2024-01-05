@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F9F6F2</color>
+    <color name="background_dark">#756B5D</color>
+    <color name="header">#1C2434</color>
+    <color name="grey_boarder">#74535157</color>
+    <color name="button">#3754a5</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="red">#80FF0000</color>
+    <color name="edit">#6eccb7</color>
+    <color name="chart_background_color">#EFEFEF</color>
+    <color name="title_background_color">#D8D8D8</color>
+    <color name="shadow_background">#4D2C2B2B</color>
+    <color name="login_background">#CC242121</color>
+    <color name="aq_blue">#0471bb</color>
+    <color name="border">#CCCCCC</color>
+
+    <!--color for profile-->
+    <color name="button_red">#eb3349</color>
+    <color name="profileBox_grey">#efedea</color>
+    <color name="profile_text">#212529</color>
+    <color name="profile_notice">#5d80f9</color>
+    <color name="profile_password_noNeed">#4d4d4d</color>
+    <!--color for marker on map-->
+    <color name="battery0">#ea3535</color>
+    <color name="battery1">#ea9035</color>
+    <color name="battery2">#eaea35</color>
+    <color name="battery3">#34ea35</color>
+
+    <color name="moisture0">#ea3535</color>
+    <color name="moisture1">#ea9035</color>
+    <color name="moisture2">#eaea35</color>
+    <color name="moisture3">#35eaea</color>
+    <color name="moisture4">#3590ea</color>
+    <color name="moisture5">#3536ea</color>
+
+    <color name="temperature0">#9035ea</color>
+    <color name="temperature1">#3590ea</color>
+    <color name="temperature2">#eaea35</color>
+    <color name="temperature3">#ea9035</color>
+    <color name="temperature4">#ea3535</color>
+</resources>

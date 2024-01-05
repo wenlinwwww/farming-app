@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:paddingVertical="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="Back"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:background="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="60dp"
+            android:background="@color/transparent"
+            app:layout_constraintHorizontal_weight="9"
+            app:layout_constraintLeft_toRightOf="@id/back_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/aq_logo" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/grey_boarder"
+            app:layout_constraintTop_toBottomOf="@id/logo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="View and Edit Sensor"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/sensor_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SensorID"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_label"/>
+
+            <EditText
+                android:id="@+id/et_sensorId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingHorizontal="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Enter sensorId"
+                android:text="YourFixedSensorId"
+                android:maxLines="1"
+                android:background="@drawable/profile_border"
+                app:layout_constraintTop_toBottomOf="@id/sensor_label" />
+
+            <TextView
+                android:id="@+id/alias_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alias"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/et_sensorId" />
+
+            <EditText
+                android:id="@+id/alias_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/border"
+                android:minHeight="48dp"
+                android:hint="NULL"
+                app:layout_constraintTop_toBottomOf="@id/alias_label" />
+            <!-- Dropdown for Sleeping Time (you'll need to add adapter and data) -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sptime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFEFEF"
+                android:layout_marginTop="15dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/alias_input">
+
+                <TextView
+                    android:id="@+id/sleeping_time_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sleep Time"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Spinner
+                    android:id="@+id/sleeping_time_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:minHeight="48dp"
+                    android:background="@drawable/selector_regular"
+                    android:entries="@array/sleeping_times"
+                    app:layout_constraintTop_toBottomOf="@id/sleeping_time_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/farm_field_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFEFEF"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/sptime">
+
+                <TextView
+                    android:id="@+id/farm_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Farm"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <Spinner
+                    android:id="@+id/farm_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_regular"
+                    android:minHeight="48dp"
+                    android:entries="@array/farm_array"
+                    app:layout_constraintTop_toBottomOf="@+id/farm_label" />
+
+
+                <!--field-->
+                <TextView
+                    android:id="@+id/field_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Field"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/farm_spinner"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <Spinner
+                    android:id="@+id/field_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_regular"
+                    android:minHeight="48dp"
+                    android:entries="@array/field_array"
+                    app:layout_constraintTop_toBottomOf="@+id/field_label" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Farm Label and Spinner -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/create_button"
+            android:paddingVertical="10dp"
+            android:text="Next"
+            android:textColor="@color/background"
+            android:textSize="30dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/farm_field_container"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zone_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/location_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place a marker to locate your sensor on map or enter the coordinates."
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/latlon_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/location_prompt">
+            <TextView
+                android:id="@+id/latitude_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Latitude:"
+                android:textSize="18dp"
+                android:minHeight="48dp"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="5dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/latitude_input"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/latitude_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:minHeight="48dp"
+                android:background="@drawable/border"
+                android:hint="-37.783465646541"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/latitude_label"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/longitude_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Longitude:"
+                android:textSize="18dp"
+                android:gravity="start|center_vertical"
+                android:minHeight="48dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/longitude_input"
+                app:layout_constraintTop_toBottomOf="@+id/latitude_label" />
+
+            <EditText
+                android:id="@+id/longitude_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:minHeight="48dp"
+                android:background="@drawable/border"
+                android:hint="144.911575138761"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toRightOf="@id/longitude_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/latitude_input" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:contentDescription="Google Map"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@id/save"
+            app:layout_constraintTop_toBottomOf="@id/latlon_input"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tools"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="@id/map_view"
+            app:layout_constraintRight_toRightOf="@id/map_view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageButton
+                    android:id="@+id/move_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/icon_hand_drag"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/grey_boarder"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="3dp"
+                    android:background="@color/grey_boarder"
+                    app:layout_constraintTop_toBottomOf="@id/move_button"
+                    app:layout_constraintBottom_toTopOf="@id/drawing_button"/>
+
+                <ImageButton
+                    android:id="@+id/drawing_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/icon_place_marker"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/background"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toBottomOf="@id/move_button"
+                    app:layout_constraintBottom_toTopOf="@id/clear_button"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="3dp"
+                    android:background="@color/grey_boarder"
+                    app:layout_constraintTop_toBottomOf="@id/drawing_button"
+                    app:layout_constraintBottom_toTopOf="@id/clear_button"
+                    />
+
+                <ImageButton
+                    android:id="@+id/clear_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/icon_clear"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/background"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toBottomOf="@id/drawing_button"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/create_button"
+            android:paddingVertical="10dp"
+            android:text="Save"
+            android:textColor="@color/background"
+            android:textSize="30dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

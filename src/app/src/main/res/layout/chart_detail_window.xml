@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/window_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="hello"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:ellipsize="middle"
+
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/window_info1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="show some details of info"
+        android:textSize="20dp"
+        android:textColor="@color/battery1"
+        android:ellipsize="middle"
+
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/window_header"/>
+    <TextView
+        android:id="@+id/window_info2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="hello"
+        android:textSize="20dp"
+        android:textColor="@color/aq_blue"
+        android:ellipsize="middle"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/window_info1"/>
+    <TextView
+        android:id="@+id/window_info3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="hello"
+        android:textSize="20dp"
+        android:textColor="@color/edit"
+        android:ellipsize="middle"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/window_info2"/>
+    <TextView
+        android:id="@+id/window_info4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="hello"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:ellipsize="middle"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/window_info3"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

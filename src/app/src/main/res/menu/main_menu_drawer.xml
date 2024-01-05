@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:theme="@style/Theme.AQ_Bluering.NoActionBar">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/icon_dashboard"
+            android:title="@string/dashboard" />
+        <item
+            android:id="@+id/farm_Field"
+            android:icon="@drawable/icon_farm"
+            android:title="@string/menu_FarmField" />
+        <item
+            android:id="@+id/gateway"
+            android:icon="@drawable/icon_gateway"
+            android:title="@string/menu_Gateway" />
+        <item
+            android:id="@+id/sensor"
+            android:icon="@drawable/icon_detector"
+            android:title="@string/menu_Sensor" />
+        <item
+            android:id="@+id/irrigation"
+            android:icon="@drawable/icon_irrigation"
+            android:title="@string/menu_Irrigation" />
+    </group>
+</menu>

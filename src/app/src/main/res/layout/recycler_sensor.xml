@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/background"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <!--index | Sensor name + gateway-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="5dp">
+            <!--index-->
+            <TextView
+                android:id="@+id/re_sensor_idx"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="32dp"
+                android:autoSizeMinTextSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="#"
+                android:textStyle="bold" />
+            <!-- vertical divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/grey_boarder"
+                tools:layout_height="80dp" />
+            <!--Sensor name + corp type-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+                <!--Sensor name-->
+                <TextView
+                    android:id="@+id/re_sensor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start|center_horizontal"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="32dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:text="Sensor Name"
+                    android:textStyle="bold" />
+                <!-- horizontal divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/grey_boarder"
+                    tools:layout_width="300dp" />
+                <!--corp type-->
+                <TextView
+                    android:id="@+id/re_sensor_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="32dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:ellipsize="middle"
+                    android:padding="5dp"
+                    android:text="Gateway"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- horizontal divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="3dp"
+            android:background="@color/grey_boarder" />
+        <!-- edit button + delete button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <!--edit button-->
+            <!--delete button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/re_Sensor_button_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_button"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:text="Edit"
+                android:textColor="@color/background"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/re_Sensor_button_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/delete_button"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:paddingHorizontal="5dp"
+                android:text="Delete"
+                android:textColor="@color/red"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

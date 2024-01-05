@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Aquaterra</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="notification">notification</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_Sensor">Sensor</string>
+    <string name="menu_Gateway">Gateway</string>
+    <string name="menu_FarmField">Farm and Field</string>
+    <string name="menu_Irrigation">Irrigation Zone</string>
+    <string name="menu_Profile">Profile</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="dashboard_map">Map</string>
+    <string name="dashboard_detail">Detail</string>
+    <string name="dashboard_chart">Chart</string>
+    <string name="title_activity_dashboard">dashboard_activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="line_chart_description">Line chart displaying data trends over time.</string>
+    <string name="battery_chart_description">Battery chart displaying battery levels over time.</string>
+</resources>

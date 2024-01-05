@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/background"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="3dp">
+
+        <!-- index-->
+        <TextView
+            android:id="@+id/re_gateway_idx"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="25dp"
+            android:autoSizeMinTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="5dp"
+            android:text="#"
+            android:textStyle="bold" />
+
+        <!-- vertical divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/grey_boarder"
+            tools:layout_height="40dp" />
+        <!--gateway name-->
+        <TextView
+            android:id="@+id/re_gatewayID"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="7"
+            android:autoSizeMaxTextSize="32dp"
+            android:autoSizeMinTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingHorizontal="5dp"
+            android:text="gateway"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:ellipsize="middle"/>
+
+
+    </LinearLayout>
+        <!--delete button-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/re_gateway_button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/delete_button"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingHorizontal="5dp"
+            android:text="Delete"
+            android:textColor="@color/red"
+            android:layout_marginBottom="3dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,61 @@
+{
+  "Description": "Root Stack for AWS Amplify CLI",
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "env": {
+      "Type": "String"
+    },
+    "AuthRoleArn": {
+      "Type": "String"
+    },
+    "UnauthRoleArn": {
+      "Type": "String"
+    },
+    "authaqbluering4a01a339UserPoolId": {
+      "Type": "String",
+      "Default": "authaqbluering4a01a339UserPoolId"
+    },
+    "authaqbluering4a01a339AppClientID": {
+      "Type": "String",
+      "Default": "authaqbluering4a01a339AppClientID"
+    },
+    "authaqbluering4a01a339AppClientIDWeb": {
+      "Type": "String",
+      "Default": "authaqbluering4a01a339AppClientIDWeb"
+    }
+  },
+  "Conditions": {
+    "ShouldNotCreateEnvResources": {
+      "Fn::Equals": [
+        {
+          "Ref": "env"
+        },
+        "NONE"
+      ]
+    }
+  },
+  "Resources": {
+    "userIGroup": {
+      "Type": "AWS::Cognito::UserPoolGroup",
+      "Properties": {
+        "UserPoolId": {
+          "Ref": "authaqbluering4a01a339UserPoolId"
+        },
+        "Description": "override success",
+        "GroupName": "userI",
+        "Precedence": 1
+      }
+    },
+    "abcGroup": {
+      "Type": "AWS::Cognito::UserPoolGroup",
+      "Properties": {
+        "UserPoolId": {
+          "Ref": "authaqbluering4a01a339UserPoolId"
+        },
+        "Description": "override success",
+        "GroupName": "abc",
+        "Precedence": 2
+      }
+    }
+  }
+}

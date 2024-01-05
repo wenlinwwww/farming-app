@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.Dashboard.Detail.Detail">
+
+    <!--    table header-->
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:autoSizeMaxTextSize="45dp"
+        android:autoSizeMinTextSize="20dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/background"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="Latest Record"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/timeContainer"
+        app:layout_constraintTop_toBottomOf="@id/menu"
+        app:layout_constraintVertical_weight="2" />
+
+    <!--    table part-->
+    <!--    time-->
+    <LinearLayout
+        android:id="@+id/timeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/moisture30Container"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Time" />
+
+        <TextView
+            android:id="@+id/timeShow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/moisture30Container"
+        app:layout_constraintTop_toTopOf="@id/timeContainer" />
+
+    <!--    moisture-30-50 -->
+    <LinearLayout
+        android:id="@+id/moisture30Container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/moisture100Container"
+        app:layout_constraintTop_toBottomOf="@+id/timeContainer"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textMoi30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Moisture-50cm" />
+
+        <TextView
+            android:id="@+id/mois50Show"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/moisture100Container"
+        app:layout_constraintTop_toTopOf="@id/moisture30Container" />
+
+    <!--    moisture-100-->
+    <LinearLayout
+        android:id="@+id/moisture100Container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/moisture150Container"
+        app:layout_constraintTop_toBottomOf="@+id/moisture30Container"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textMoi100"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Moisture-100cm" />
+
+        <TextView
+            android:id="@+id/mois100Show"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/moisture150Container"
+        app:layout_constraintTop_toTopOf="@id/moisture100Container" />
+
+    <!--    moisture-150-->
+    <LinearLayout
+        android:id="@+id/moisture150Container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/temperatureContainer"
+        app:layout_constraintTop_toBottomOf="@+id/moisture100Container"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textMoi150"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Moisture-150cm" />
+
+        <TextView
+            android:id="@+id/mois150Show"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/temperatureContainer"
+        app:layout_constraintTop_toTopOf="@id/moisture150Container" />
+
+    <!--    temperature-->
+    <LinearLayout
+        android:id="@+id/temperatureContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/batteryContainer"
+        app:layout_constraintTop_toBottomOf="@+id/moisture150Container"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textTemp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Temperature" />
+
+        <TextView
+            android:id="@+id/tempShow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/batteryContainer"
+        app:layout_constraintTop_toTopOf="@id/temperatureContainer" />
+
+    <!--    battery-->
+    <LinearLayout
+        android:id="@+id/batteryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/sensorContainer"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureContainer"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textBattery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Battery" />
+
+        <TextView
+            android:id="@+id/battaryShow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/sensorContainer"
+        app:layout_constraintTop_toTopOf="@id/batteryContainer" />
+
+    <!--    Sensor-->
+    <LinearLayout
+        android:id="@+id/sensorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/aliasContainer"
+        app:layout_constraintTop_toBottomOf="@+id/batteryContainer"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textSensor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Sensor ID" />
+
+        <TextView
+            android:id="@+id/sensorShow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+    <!--    divider  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        android:background="@color/grey_boarder"
+        app:layout_constraintBottom_toBottomOf="@id/aliasContainer"
+        app:layout_constraintTop_toTopOf="@id/sensorContainer" />
+
+    <!--    alias-->
+    <LinearLayout
+        android:id="@+id/aliasContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/weatherContainer"
+        app:layout_constraintTop_toBottomOf="@+id/sensorContainer"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/textAlias"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            android:text=" Alias" />
+
+        <TextView
+            android:id="@+id/aliasShow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="middle"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Loading......" />
+    </LinearLayout>
+
+    <!--    weather part-->
+
+    <!-- View on top when no data received-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aliasContainer"
+        app:layout_constraintVertical_weight="9"
+        tools:layout_editor_absoluteX="-33dp">
+        <!--        date-->
+
+        <TextView
+            android:id="@+id/textClick"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text=" Click for more detail"
+            android:textColor="#FEFEFE"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@id/weatherImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textHighLowTemp"
+            app:layout_constraintVertical_weight="1" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Today"
+            android:textColor="#FEFEFE"
+            app:layout_constraintBottom_toTopOf="@id/textDailyTemp"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@id/location"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1" />
+        <!--        everyday temperature-->
+        <TextView
+            android:id="@+id/textDailyTemp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="3dp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="22°"
+            android:textColor="#FEFEFE"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/textHighLowTemp"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@id/weatherImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDate"
+            app:layout_constraintVertical_bias="0.089"
+            app:layout_constraintVertical_weight="2" />
+
+        <!--        weather icon-->
+        <ImageView
+            android:id="@+id/weatherImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/weather_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/textDailyTemp"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintVertical_weight="2"/>
+
+
+        <!--        weather sub-detail-->
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="3dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Loading"
+            android:textColor="#FEFEFE"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/weatherImage"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textDate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="2" />
+
+        <TextView
+            android:id="@+id/textHighLowTemp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="3dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:text="27° / 18°"
+            android:textColor="#FEFEFE"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/textClick"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@id/weatherImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDailyTemp"
+            app:layout_constraintVertical_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/menu">
+
+        <TextView
+            android:id="@+id/no_data_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- menu part -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/textHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="5">
+
+        <Spinner
+            android:id="@+id/spinner_farm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_fill"
+            android:dropDownWidth="match_parent"
+            android:minHeight="48dp"
+            android:overlapAnchor="false"
+            android:paddingRight="40dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/spinner_field"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_option_white" />
+
+        <Spinner
+            android:id="@+id/spinner_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_fill"
+            android:dropDownWidth="match_parent"
+            android:minHeight="48dp"
+            android:paddingRight="40dp"
+            android:overlapAnchor="false"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/spinner_farm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_option_white" />
+
+        <Spinner
+            android:id="@+id/spinner_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_fill"
+            android:minHeight="48dp"
+            android:overlapAnchor="false"
+            android:spinnerMode="dropdown"
+            android:paddingRight="40dp"
+            app:layout_constraintTop_toBottomOf="@id/spinner_field"
+            tools:listitem="@layout/list_option_white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

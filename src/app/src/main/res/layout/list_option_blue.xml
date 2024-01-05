@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:text="Test a very very long option"
+    android:textSize="20dp"
+    android:autoSizeTextType="uniform"
+    android:autoSizeMinTextSize="10dp"
+    android:autoSizeMaxTextSize="25dp"
+    android:maxLines="1"
+    android:gravity="left"
+    android:textColor="@color/button"
+    android:textStyle="bold"
+    android:padding="5dip"
+    />

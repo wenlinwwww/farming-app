@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aqbluering-dev-14047-authRole",
+      "UnauthRoleArn": "arn:aws:iam::432438631462:role/amplify-aqbluering-dev-14047-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::432438631462:role/amplify-aqbluering-dev-14047-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-aqbluering-dev-14047-deployment",
+      "UnauthRoleName": "amplify-aqbluering-dev-14047-unauthRole",
+      "StackName": "amplify-aqbluering-dev-14047",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:432438631462:stack/amplify-aqbluering-dev-14047/0176d0a0-62c4-11ee-9ff0-0681a1cde32e",
+      "AmplifyAppId": "d3lw3zh54vlfhx"
+    },
+    "categories": {
+      "auth": {
+        "aqbluering6a57c9e8": {
+          "userPoolId": "ap-southeast-2_cSiT8o4mI",
+          "userPoolName": "user",
+          "webClientId": "18kpbn4p9u0ii7bdi58hatrdtm",
+          "nativeClientId": "18kpbn4p9u0ii7bdi58hatrdtm"
+        }
+      }
+    }
+  }
+}

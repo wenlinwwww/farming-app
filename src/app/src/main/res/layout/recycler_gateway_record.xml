@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@color/background"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+        <!--gateway name-->
+        <TextView
+            android:id="@+id/re_gatewayID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:layout_gravity="center"
+            android:autoSizeMaxTextSize="35dp"
+            android:autoSizeMinTextSize="25dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="gateway"
+            android:textStyle="bold"
+            android:ellipsize="middle"
+            tools:textSize="30dp"/>
+
+
+</androidx.cardview.widget.CardView>

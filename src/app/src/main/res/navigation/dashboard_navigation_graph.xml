@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/dashboard_detail"
+    android:theme="@style/Theme.AQ_Bluering.NoActionBar">
+    <fragment
+        android:id="@+id/dashboard_detail"
+        android:name="com.example.aq_bluering.ui.Dashboard.Detail.Detail"
+        android:label="fragment_dashboard_detail"
+        tools:layout="@layout/fragment_dashboard_detail" />
+    <fragment
+        android:id="@+id/dashboard_chart"
+        android:name="com.example.aq_bluering.ui.Dashboard.Chart.Chart"
+        android:label="fragment_dashboard_chart"
+        tools:layout="@layout/fragment_dashboard_chart" />
+    <fragment
+        android:id="@+id/dashboard_map"
+        android:name="com.example.aq_bluering.ui.Dashboard.Map.Map"
+        android:label="fragment_dashboard_map"
+        tools:layout="@layout/fragment_dashboard_map" />
+</navigation>

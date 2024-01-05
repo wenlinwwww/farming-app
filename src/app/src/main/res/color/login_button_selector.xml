@@ -1,0 +1,8 @@
+<!-- res/drawable/button_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true" android:color="@color/teal_700" />
+
+    <!-- Default (normal) state -->
+    <item android:color="@color/edit" />
+</selector>

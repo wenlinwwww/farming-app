@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="farm_array">
+        <item>DemoFarm</item>
+
+    </string-array>
+
+    <string-array name="field_array">
+        <item>Demofield</item>
+
+    </string-array>
+
+    <string-array name="corp_array">
+        <item>Canola</item>
+        <item>Rice</item>
+        <item>Corn</item>
+        <item>Soy</item>
+        <item>Spinach</item>
+        <item>Rocket</item>
+        <item>Lettuce</item>
+        <item>Kale</item>
+        <item>Mizuna</item>
+        <item>Tatsoi and herbs</item>
+        <item>Coriander</item>
+        <item>Parsley</item>
+        <item>Dill</item>
+        <item>Spring onion</item>
+        <item>Zucchini</item>
+        <item>Cauliflower</item>
+        <item>Pumpkin</item>
+        <item>Others</item>
+
+
+    </string-array>
+    <string-array name="sleeping_times">
+        <item>30sec</item>
+        <item>1min</item>
+        <item>2min</item>
+        <item>0.5hr</item>
+        <item>1hr</item>
+        <item>2hr</item>
+        <item>3hr</item>
+        <item>4hr</item>
+        <item>5hr</item>
+        <item>6hr</item>
+        <item>7hr</item>
+        <item>8hr</item>
+        <item>10hr</item>
+        <item>11hr</item>
+        <item>12hr</item>
+        <item>3600ms</item>
+
+    </string-array>
+    <string-array name="soil_25_array">
+        <item>Clay</item>
+        <item>Loam</item>
+        <item>Clay-Loam</item>
+        <item>Sand</item>
+
+    </string-array>
+    <string-array name="soil_75_array">
+        <item>Clay</item>
+        <item>Loam</item>
+        <item>Clay-Loam</item>
+        <item>Sand</item>
+
+    </string-array>
+    <string-array name="soil_125_array">
+        <item>Clay</item>
+        <item>Loam</item>
+        <item>Clay-Loam</item>
+        <item>Sand</item>
+
+    </string-array>
+</resources>

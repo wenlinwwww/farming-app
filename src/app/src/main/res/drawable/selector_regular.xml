@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <layer-list>
+        <item>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/transparent"/>
+                <stroke android:color="@color/grey_boarder" android:width="2dp"/>
+                <padding android:left="5dp" android:right="5dp"/>
+                <corners android:radius="10dp"/>
+            </shape>
+        </item>
+        <item android:drawable="@drawable/icon_triangle_grey"
+            android:gravity="end">
+            <padding android:left="5dp" android:right="5dp"/>
+
+
+        </item>
+    </layer-list>
+
+</item>
+
+</selector>

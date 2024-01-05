@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:theme="@style/Theme.AQ_Bluering.NoActionBar"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard_detail"
+            android:checked="true"
+            android:icon="@drawable/icon_detail"
+            android:title="@string/dashboard" />
+        <item
+            android:id="@+id/dashboard_chart"
+            android:checked="true"
+            android:icon="@drawable/icon_chart"
+            android:title="@string/dashboard_chart" />
+        <item
+            android:id="@+id/dashboard_map"
+            android:checked="true"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/dashboard_map" />
+    </group>
+</menu>
