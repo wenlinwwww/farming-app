@@ -27,69 +27,13 @@ Support historical data analysis .
 Support reliable information and recommendations for users.
 Users can manage field, sensor, gateway data.
 
-### Supervisor & Client & IT Support Information
-| Name            | Role                   | Email |
-| --------------- | ---------------        |----------------------------|
-| Sean Wei        | Auqaterra IT support   |wang.w11@unimelb.edu.au|
-| Lokesh Chandra  | Client                 |lokesh.spark.1651@gmail.com|
-| Wei Wang        | Supervisor             |sean.wei@unimelb.edu.au|
-
-### Team Members
-
-| Name            | Role            | Role Responsibility| Contact Detail|
-| --------------- | --------------- | ------------------- | -------------------|
-| Zhenning Tang   | Product owner   | Responsible for creating a product plan and communicating with the client. <br>Responsible for prioritising the product backlog. <br>Responsible for gathering feedback on product process.  | zhenningt@student.unimleb.edu.au |
-| Liu Lei         | Scrum Master    |Responsible for daily stand-ups, sprint planning, sprint view and retrosperctives. <br>Responsible for tracking the sprint process. <br>Responsible for promoting team improvement.  | liulei@student.unimelb.edu.au|
-| Yitong Qu       | Front-end lead  | Responsible for front-end technologies and code. <br>Responsible for collaborating with back-end lead and developer.  <br>Responsible for UI design.  | yitongq@student.unimelb.edu.au |
-| Zewei Liu       | Back-end lead   | Responsible for Back-end technologies and code. <br>Responsible for API design. <br>Responsible for supporting developer.  | zeweil@student.unimelb.edu.au|
-| Wenlin Wang     | Developer       | Responsible for writing, testing and debugging code. <br>Responsible for collaborating with other team members to align with product requirements. <br>Responsible for updating developments of mobile application.  | wenlinw@student.unimelb.edu.au|
-
-### Trello:
-
-Sprint 1: 
-
-Join Trello as member：
-
-https://trello.com/invite/b/9wtcigHa/ATTI0d349638a97b7498c24c2ddf19fe86ed583C0F68/sprint1
-
-and then visitor Trello
-
-https://trello.com/b/9wtcigHa/sprint1
-
-Sprint 2: 
-
-Join Trello as member ：https://trello.com/invite/b/YQDpDCi2/ATTI42419c47f6c7a437c1462805a8e829a945383EF0/sprint2
-
-and then visitor Trello
-
-https://trello.com/b/YQDpDCi2/sprint2
-
-Sprint 3: 
-
-Join Trello as member ：
-
-https://trello.com/invite/b/tOdK5iGg/ATTI3201aac66faab749689cec759673cee522C1B6B3/sprint3
-
-and then visitor Trello
-
-https://trello.com/b/tOdK5iGg/sprint3
-
 ### Folder Structure
-**Docs**:
-This dictionary contains document files related to the project (readme, sprint.md, etc.)  
 
 **src**:
 This dictionary contains the programming files and other resource files related to the final product.
 
 ```
 AQ-BlueRing/
-├── data samples/
-    ├── Aquaterra.apk                            # product apk
-    ├── Aquaterra_API_Endpoint_Description.pdf
-    ├── Aquaterr_Client_Sensor_Manual.pdf  
-├── docs/                                        # Documentation files 
-    ├── COMP9008SM2AQBlueRing_Confluence_sprint3.pdf
-    ├── COMP90082_AQ_Bluering_CodeReview.xlsx
 ├── src/                                         # src code
     ├── App/                                    # Product App codes
     ├── Gradle/                                 # Enviornment configuration file
@@ -111,4 +55,4 @@ To ensure the quality of the main brunch and avoid the issue caused by version m
 4. No brunch merge unless quality is checked by at least two developers
 5. The main branch stores all the merged code, and the development branch can be named according to different app functionalities.
 6. Tag each sprint, and name the tag in the following format:  
-*COMP90082_2023_SM2_AQ_Bluering_BL_SPRINT1*
+*2023_SM2_AQ_Bluering_BL_SPRINT1*
