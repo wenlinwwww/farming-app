@@ -13,9 +13,7 @@ To this end, the primary objective of our project is to create an Android mobile
 
 ### Goal
 1: Support a user-friendly interface design for mobile application.
-
 2: Meet users' needs and improve users' experience
-
 Users can track the soil data timely.
 Support historical data analysis .
 Support reliable information and recommendations for users.
