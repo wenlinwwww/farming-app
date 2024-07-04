@@ -12,8 +12,8 @@ However, with the undeniable shift in user preferences, there's been a significa
 To this end, the primary objective of our project is to create an Android mobile application that mirrors the functionality of the current web platform. This app will not only ensure that Aquaterra is aligned with the digital shift but will also position the organization to offer farmers more flexible, on-the-go assistance, propelling their mobile business transformation.
 
 ### Goal
-1: Support a user-friendly interface design for mobile application.
-2: Meet users' needs and improve users' experience
+1: Support a user-friendly interface design for mobile application.  
+2: Meet users' needs and improve users' experience  
 Users can track the soil data timely.
 Support historical data analysis .
 Support reliable information and recommendations for users.
