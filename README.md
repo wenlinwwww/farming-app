@@ -1,13 +1,7 @@
-# AQ-Bluering
-
 ### Project Overview
 In this project, we need to create an Android mobile application for our client AquaTerra Solutions Pty Ltd.  We aim to design a user-friendly mobile application so that users can conveniently access soil moisture and temperature data. Our mobile application's core functions will focus on user registration and login, field monitoring, sensor integration, gateway connectivity, and profile management.
 
 To better develop the mobile application, we have a team with five members: Product Owner, Scrum Master, Front-end Lead, Back-end Lead, and developer. In the mobile application, we will follow the different stages of the sprint process to roll out features. At each stage, functionalities will be tested, reviewed, and redesigned based on feedback. Meeting notes will be regularly taken to track the sprint progress. 
-
-### Client background
-AquaTerra Solutions Pty Ltd
-webapp: https://aqua-terra.com.au/index.html
 
 Aquaterra is at the forefront of integrating intelligent farming and data technology to elevate farming operations' efficiency. Leveraging an online platform, Aquaterra allows farmers to seamlessly manage a diverse array of data collection hardware, ensuring they're equipped with critical information to make informed farming decisions.
 
@@ -40,7 +34,6 @@ AQ-BlueRing/
 ├── tests/
     ├── Aquaterra_v2.apk                            # product apk
     ├── Aquaterra_v1.apk
-    ├── COMP90082_AQ_Bluering_CodeReview.xlsx
 └── README.md
 ```
 ### Documentation and Guidelines:
@@ -55,4 +48,4 @@ To ensure the quality of the main brunch and avoid the issue caused by version m
 4. No brunch merge unless quality is checked by at least two developers
 5. The main branch stores all the merged code, and the development branch can be named according to different app functionalities.
 6. Tag each sprint, and name the tag in the following format:  
-*2023_SM2_AQ_Bluering_BL_SPRINT1*
+*2023_SPRINT1*
